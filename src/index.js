@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
-
-const title = 'Store Manager App';
+import { Provider } from 'react-redux';
+import Routes from './routes/index';
+import store from './store/combineStore';
 
 ReactDOM.render(
-  <div><App /></div>,
+  <Provider store={store}>
+  <Routes />
+  </Provider>,
   document.getElementById('app')
 );
 
