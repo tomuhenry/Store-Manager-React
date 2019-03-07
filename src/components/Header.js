@@ -3,9 +3,10 @@ import { NavLink } from 'react-router-dom';
 
 const Header = () => (
   <div className='header'>
-    <NavLink to='/'>Home</NavLink>
+    <NavLink to='/' onClick={() => localStorage.removeItem('token')}>Logout</NavLink>
     &nbsp;
-    <NavLink to='/login'>Login</NavLink>
+    <NavLink to='/home'>Home</NavLink>
+    &nbsp;
   </div>
 );
 
