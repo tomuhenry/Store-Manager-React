@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import LoginForm from '../components/LoginForm';
+import SignupForm from '../components/SignupForm';
 import { connect } from 'react-redux';
-import loginAction from '../actions/loginAction';
+import signupAction from '../actions/signupAction';
+import Header from '../components/Header';
 import Loader from '../components/Loader';
-export class LoginView extends Component {
+
+export class SignupView extends Component {
   state = {
     value: '',
     errors: {},
@@ -20,17 +22,10 @@ export class LoginView extends Component {
   componentWillReceiveProps(nextProps) {
     const { data, errors } = nextProps;
     if (errors) {
-      this.setState({ errors: errors.data });
+      this.setState({ errors: errors });
       this.setState({ loading: false });
     } else if (data) {
-      if (data.admin_token) {
-        localStorage.setItem('access_token', data.admin_token);
-      } else if (data.user_token) {
-        localStorage.setItem('access_token', data.user_token);
-      }
-      this.setState({ data: data });
       this.setState({ loading: false });
-      this.props.history.push('/home');
     }
   }
 
@@ -38,19 +33,20 @@ export class LoginView extends Component {
     e.preventDefault();
     const data = {
       email: this.state.email,
+      name: this.state.name,
       password: this.state.password
     };
     this.setState({ loading: true });
-    this.props.loginAction(data);
+    this.props.signupAction(data);
   };
 
   render() {
     return (
       <div>
-        <h1>Store Manager</h1>
-        <p id='welcome_text'>Welcome to the Store Manager Application</p>
+        <Header />
+        <p id='welcome_text'>Add new user to Store Manager</p>
         <div className='loader'>{this.state.loading ? <Loader /> : null}</div>
-        <LoginForm
+        <SignupForm
           changed={this.handleChange}
           FormSubmit={this.handleFormSubmit}
           errors={this.state.errors}
@@ -62,11 +58,11 @@ export class LoginView extends Component {
 }
 export const mapStateToProps = state => {
   return {
-    data: state.login.data,
-    errors: state.login.errors
+    data: state.signup.data,
+    errors: state.signup.errors
   };
 };
 export default connect(
   mapStateToProps,
-  { loginAction }
-)(LoginView);
+  { signupAction }
+)(SignupView);

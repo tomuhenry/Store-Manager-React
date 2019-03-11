@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import HomeView from '../HomeView'
+import HomeView from '../HomeView';
 
 describe('App', () => {
     it('should render correctly', () => {

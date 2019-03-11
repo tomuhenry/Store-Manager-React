@@ -10,6 +10,39 @@ h1 {
   text-shadow: 3px 3px 5px #000000;
 }
 
+.header {
+  height: 67px;
+  background: #078db3;
+}
+
+#nav-bar {
+  position: absolute;
+  width: 98%;
+  left: 0px;
+  top: 0px;
+}
+
+.nav-links {
+  width: 25%;
+  float: right;
+  margin-top: 23px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
+  margin: 5px;
+}
+
+.nav-links a:hover {
+  color: #000000d0;
+}
+
+.loader {
+  text-align: center;
+}
+
 p {
   margin: 5px;
   padding: 5px;
@@ -52,7 +85,8 @@ p {
 }
 
 .flex-login input[type='password'],
-input[type='email'] {
+input[type='email'],
+input[type='text'] {
   border: none;
   border-bottom: 1px solid #ffffff;
   background: transparent;
@@ -70,52 +104,76 @@ input[type='email'] {
   border-radius: 12px;
 }
 .flex-login input[type='submit'] {
-  background: #219dc0;
+  background: #25abd1;
   color: #ffffff;
 }
 .flex-login input[type='submit']:hover {
   cursor: pointer;
-  background: #4dc6e7;
-  color: #000;
-}
-.flex-login input[type='button'] {
-  border: none;
-  outline: none;
-  height: 35px;
-  width: 49%;
-  font-size: 18px;
-  border-radius: 12px;
-}
-.flex-login input[type='button'] {
-  background: #ff0707;
-  color: #ffffff;
-}
-.flex-login input[type='button']:hover {
-  cursor: pointer;
-  background: #07c5ff;
-  color: #000;
+  background: #ffffff;
+  color: #25abd1;
 }
 
 .flex-login a {
   line-height: 15px;
   text-decoration: none;
-  color: rgb(235, 235, 0);
+  color: #fff;
 }
 
 .flex-login a:hover {
-  color: #07c5ff;
+  color: #25abd1;
 }
 
 #message {
-  color: #ff2020;
-  text-align: center;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #ff0200;
+  align-self: center;
+}
+/* Loader css */
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+}
+.lds-dual-ring:after {
+  content: ' ';
+  display: block;
+  width: 46px;
+  height: 46px;
+  margin: 1px;
+  border-radius: 50%;
+  border: 5px solid #25abd1;
+  border-color: #25abd1 transparent #25abd1 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
+/* Media queries */
 @media only screen and (min-width: 100px) and (max-width: 600px) {
   .flex-container {
     text-align: center;
     display: flex;
     flex-direction: column;
+  }
+
+  #nav-bar {
+    width: 100%;
+  }
+
+  .nav-links {
+    width: 25%;
+    margin-top: 20px;
+  }
+
+  .nav-links a {
+    font-size: 15px;
+    display: block;
+    margin: 2px;
   }
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import Loader from '../components/Loader';
 
 const LoginForm = props => {
   return (
@@ -10,20 +11,18 @@ const LoginForm = props => {
           <input
             type='email'
             placeholder='Email...'
-            id='email'
             name='email'
             onChange={props.changed}
           />
           <input
             type='password'
             placeholder='Password...'
-            id='password'
             name='password'
             onChange={props.changed}
           />
-          <input type='submit' value="Login" className='form_button' />
+          <input type='submit' value="Login" />
           <span id="message"/><br/>
-          <a href='' id='forgot-password-link'>
+          <a href=''>
             Forgot password?
           </a>
         </form>

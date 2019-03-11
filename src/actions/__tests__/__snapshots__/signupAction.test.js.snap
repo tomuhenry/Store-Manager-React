@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Signup Actions dispatch actions for signup 1`] = `<signupAction />`;
