@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico%7CPoppins');
+
+h1 {
+  font-family: Pacifico;
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+  font-size: 45px;
+  color: #25abd1;
+  text-shadow: 3px 3px 5px #000000;
+}
+
+p {
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex-container div {
+  border: 1px #cccccc solid;
+  padding: 40px 25px;
+  border-radius: 20px;
+  flex-basis: 30%;
+  min-height: 300px;
+  min-width: 400px;
+  margin: 5px;
+  background: #000000d3;
+  top: 25%;
+  left: 25%;
+  -ms-flex-align: center;
+}
+
+.flex-login h1 {
+  margin: 0;
+  font-family: Poppins;
+  text-align: center;
+  color: #ffffff;
+  font-size: 150%;
+}
+
+.flex-login input {
+  width: 100%;
+  outline: none;
+  margin: 10px 0px;
+}
+
+.flex-login input[type='password'],
+input[type='email'] {
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  background: transparent;
+  height: 35px;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.flex-login input[type='submit'] {
+  border: none;
+  outline: none;
+  height: 35px;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 12px;
+}
+.flex-login input[type='submit'] {
+  background: #219dc0;
+  color: #ffffff;
+}
+.flex-login input[type='submit']:hover {
+  cursor: pointer;
+  background: #4dc6e7;
+  color: #000;
+}
+.flex-login input[type='button'] {
+  border: none;
+  outline: none;
+  height: 35px;
+  width: 49%;
+  font-size: 18px;
+  border-radius: 12px;
+}
+.flex-login input[type='button'] {
+  background: #ff0707;
+  color: #ffffff;
+}
+.flex-login input[type='button']:hover {
+  cursor: pointer;
+  background: #07c5ff;
+  color: #000;
+}
+
+.flex-login a {
+  line-height: 15px;
+  text-decoration: none;
+  color: rgb(235, 235, 0);
+}
+
+.flex-login a:hover {
+  color: #07c5ff;
+}
+
+#message {
+  color: #ff2020;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+@media only screen and (min-width: 100px) and (max-width: 600px) {
+  .flex-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+}

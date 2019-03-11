@@ -2,15 +2,13 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import HomeView from '../views/HomeView';
-import LoginView from '../views/Login';
-import Header from '../components/Header';
+import LoginView from '../views/LoginView';
 
 const Routes = () => (
   <Router>
     <div>
-      <Header />
-      <Route exact path='/' component={HomeView} />
-      <Route exact path='/login' component={LoginView} />
+      <Route exact path='/home' component={HomeView} />
+      <Route exact path='/' component={LoginView} />
     </div>
   </Router>
 );
