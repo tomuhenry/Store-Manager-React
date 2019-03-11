@@ -8,17 +8,46 @@ import loginAction, { fetchLoginSuccess, fetchLoginFailure } from '../loginActio
 const middleware = [thunk];
 const mockStore = configureMockStore(middleware);
 const store = mockStore({});
-const userData = { email: "email@here.com", password:"my password" }
+const mockUserData = { email: "email@here.com", password:"my password" }
+
+jest.mock('axios');
 
 describe('Login Actions', () => {
   afterEach = () => {
     mockAxios.reset();
   };
 
-  it('dispatch actions for login', () => {
-    mockAxios.post('MockURL', userData);
-    store.dispatch(loginAction);
-    expect(store.getActions()).toEqual([]);
+  it('dispatch actions for login success', async () => {
+    const response = {
+      user_token: 'logged in',
+      };
+    mockAxios.post.mockImplementationOnce(() =>
+      Promise.resolve({ data: response })
+    );
+    await store.dispatch(loginAction(mockUserData));
+    expect(store.getActions().length).toEqual(1);
+  });
+
+  it('dispatch actions for login fail', async () => {
+    const response = {
+      admin_token: 'logged in',
+      };
+    mockAxios.post.mockImplementationOnce(() =>
+      Promise.resolve({ data: response })
+    );
+    await store.dispatch(loginAction(mockUserData));
+    expect(store.getActions().length).toEqual(2);
+  });
+
+  it('dispatch actions for login failure', async () => {
+    const response = {
+        error: 'not logged in',
+      };
+    mockAxios.post.mockImplementationOnce(() =>
+      Promise.resolve({ data: response })
+    );
+    await store.dispatch(loginAction(mockUserData));
+    expect(store.getActions().length).toEqual(2);
   });
 
   it('should dispatch success action', () => {
