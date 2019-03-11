@@ -1,14 +1,14 @@
 const express = require('express');
 const path = require('path');
 
- const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 
- const app = express();
+const app = express();
 
- app.use(express.static(path.resolve(__dirname, 'dist')));
+app.use(express.static(path.resolve(__dirname, 'dist')));
 
- app.get('*', (req, res) => {
+app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
 });
 
- app.listen(PORT);
+app.listen(PORT);

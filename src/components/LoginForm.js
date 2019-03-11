@@ -11,12 +11,14 @@ const LoginForm = props => {
           <input
             type='email'
             placeholder='Email...'
+            id='email'
             name='email'
             onChange={props.changed}
           />
           <input
             type='password'
             placeholder='Password...'
+            id='password'
             name='password'
             onChange={props.changed}
           />

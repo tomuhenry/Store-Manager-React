@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1552421149247" clover="3.2.0">
-  <project timestamp="1552421149247" name="All files">
-    <metrics statements="95" coveredstatements="28" conditionals="41" coveredconditionals="8" methods="32" coveredmethods="7" elements="168" coveredelements="43" complexity="0" loc="95" ncloc="95" packages="4" files="14" classes="14"/>
+<coverage generated="1552567308719" clover="3.2.0">
+  <project timestamp="1552567308720" name="All files">
+    <metrics statements="100" coveredstatements="80" conditionals="43" coveredconditionals="29" methods="33" coveredmethods="26" elements="176" coveredelements="135" complexity="0" loc="100" ncloc="100" packages="4" files="14" classes="14"/>
     <package name="actions">
-      <metrics statements="36" coveredstatements="8" conditionals="16" coveredconditionals="0" methods="12" coveredmethods="2"/>
+      <metrics statements="36" coveredstatements="21" conditionals="16" coveredconditionals="5" methods="12" coveredmethods="8"/>
       <file name="actionTypes.js" path="/Users/henrytomusange/Desktop/LmsOutput8/Store-Manager-React/src/actions/actionTypes.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="6" type="stmt"/>
+        <line num="1" count="7" type="stmt"/>
       </file>
       <file name="loginAction.js" path="/Users/henrytomusange/Desktop/LmsOutput8/Store-Manager-React/src/actions/loginAction.js">
-        <metrics statements="13" coveredstatements="3" conditionals="6" coveredconditionals="0" methods="6" coveredmethods="1"/>
+        <metrics statements="13" coveredstatements="3" conditionals="6" coveredconditionals="0" methods="6" coveredmethods="3"/>
         <line num="5" count="2" type="stmt"/>
         <line num="10" count="2" type="stmt"/>
         <line num="15" count="2" type="stmt"/>
@@ -25,24 +25,24 @@
         <line num="33" count="0" type="stmt"/>
       </file>
       <file name="signupAction.js" path="/Users/henrytomusange/Desktop/LmsOutput8/Store-Manager-React/src/actions/signupAction.js">
-        <metrics statements="22" coveredstatements="4" conditionals="10" coveredconditionals="0" methods="6" coveredmethods="1"/>
+        <metrics statements="22" coveredstatements="17" conditionals="10" coveredconditionals="5" methods="6" coveredmethods="5"/>
         <line num="6" count="2" type="stmt"/>
         <line num="8" count="2" type="stmt"/>
-        <line num="13" count="2" type="stmt"/>
-        <line num="18" count="2" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="32" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
-        <line num="35" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="36" count="0" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="38" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="39" count="0" type="stmt"/>
-        <line num="40" count="0" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="27" count="3" type="stmt"/>
+        <line num="32" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="35" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="38" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
         <line num="44" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="45" count="0" type="stmt"/>
         <line num="47" count="0" type="cond" truecount="0" falsecount="2"/>
@@ -51,104 +51,109 @@
       </file>
     </package>
     <package name="components">
-      <metrics statements="10" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="2"/>
+      <metrics statements="10" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="5"/>
       <file name="App.js" path="/Users/henrytomusange/Desktop/LmsOutput8/Store-Manager-React/src/components/App.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="4" count="2" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
       </file>
       <file name="Header.js" path="/Users/henrytomusange/Desktop/LmsOutput8/Store-Manager-React/src/components/Header.js">
-        <metrics statements="3" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
+        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
       </file>
       <file name="Loader.js" path="/Users/henrytomusange/Desktop/LmsOutput8/Store-Manager-React/src/components/Loader.js">
-        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="4" count="0" type="stmt"/>
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="3" type="stmt"/>
       </file>
       <file name="LoginForm.js" path="/Users/henrytomusange/Desktop/LmsOutput8/Store-Manager-React/src/components/LoginForm.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="4" count="2" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
+        <line num="5" count="15" type="stmt"/>
       </file>
       <file name="SignupForm.js" path="/Users/henrytomusange/Desktop/LmsOutput8/Store-Manager-React/src/components/SignupForm.js">
-        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
       </file>
     </package>
     <package name="reducers">
-      <metrics statements="13" coveredstatements="10" conditionals="9" coveredconditionals="8" methods="3" coveredmethods="2"/>
+      <metrics statements="13" coveredstatements="13" conditionals="9" coveredconditionals="9" methods="3" coveredmethods="3"/>
       <file name="loginReducer.js" path="/Users/henrytomusange/Desktop/LmsOutput8/Store-Manager-React/src/reducers/loginReducer.js">
         <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="10" count="3" type="cond" truecount="3" falsecount="0"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="10" count="6" type="cond" truecount="3" falsecount="0"/>
         <line num="12" count="1" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
-        <line num="26" count="1" type="stmt"/>
+        <line num="26" count="4" type="stmt"/>
       </file>
       <file name="rootReducer.js" path="/Users/henrytomusange/Desktop/LmsOutput8/Store-Manager-React/src/reducers/rootReducer.js">
-        <metrics statements="3" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
+        <metrics statements="3" coveredstatements="3" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
       </file>
       <file name="signupReducer.js" path="/Users/henrytomusange/Desktop/LmsOutput8/Store-Manager-React/src/reducers/signupReducer.js">
         <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="10" count="3" type="cond" truecount="3" falsecount="0"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="10" count="6" type="cond" truecount="3" falsecount="0"/>
         <line num="12" count="1" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
-        <line num="26" count="1" type="stmt"/>
+        <line num="26" count="4" type="stmt"/>
       </file>
     </package>
     <package name="views">
-      <metrics statements="36" coveredstatements="4" conditionals="16" coveredconditionals="0" methods="11" coveredmethods="1"/>
+      <metrics statements="41" coveredstatements="37" conditionals="18" coveredconditionals="15" methods="12" coveredmethods="10"/>
       <file name="HomeView.js" path="/Users/henrytomusange/Desktop/LmsOutput8/Store-Manager-React/src/views/HomeView.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
       </file>
       <file name="LoginView.js" path="/Users/henrytomusange/Desktop/LmsOutput8/Store-Manager-React/src/views/LoginView.js">
-        <metrics statements="20" coveredstatements="1" conditionals="10" coveredconditionals="0" methods="5" coveredmethods="0"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="22" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="25" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="26" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="28" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="31" count="0" type="stmt"/>
-        <line num="32" count="0" type="stmt"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="38" count="0" type="stmt"/>
-        <line num="39" count="0" type="stmt"/>
-        <line num="43" count="0" type="stmt"/>
-        <line num="44" count="0" type="stmt"/>
-        <line num="48" count="0" type="stmt"/>
-        <line num="63" count="1" type="stmt"/>
-        <line num="64" count="0" type="stmt"/>
+        <metrics statements="20" coveredstatements="17" conditionals="10" coveredconditionals="8" methods="5" coveredmethods="4"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="21" count="4" type="stmt"/>
+        <line num="22" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="25" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="27" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="49" count="13" type="stmt"/>
+        <line num="64" count="1" type="stmt"/>
+        <line num="65" count="0" type="stmt"/>
       </file>
       <file name="SignupView.js" path="/Users/henrytomusange/Desktop/LmsOutput8/Store-Manager-React/src/views/SignupView.js">
-        <metrics statements="14" coveredstatements="1" conditionals="6" coveredconditionals="0" methods="5" coveredmethods="0"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="24" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="27" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
-        <line num="39" count="0" type="stmt"/>
-        <line num="40" count="0" type="stmt"/>
-        <line num="44" count="0" type="stmt"/>
-        <line num="59" count="1" type="stmt"/>
-        <line num="60" count="0" type="stmt"/>
+        <metrics statements="19" coveredstatements="18" conditionals="8" coveredconditionals="7" methods="6" coveredmethods="5"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="19" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="20" count="4" type="stmt"/>
+        <line num="21" count="4" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="32" count="4" type="stmt"/>
+        <line num="33" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="34" count="2" type="stmt"/>
+        <line num="35" count="2" type="stmt"/>
+        <line num="36" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="54" count="14" type="stmt"/>
+        <line num="69" count="1" type="stmt"/>
+        <line num="70" count="0" type="stmt"/>
       </file>
     </package>
   </project>

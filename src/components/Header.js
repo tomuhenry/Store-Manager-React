@@ -16,7 +16,7 @@ const Header = () => (
         &nbsp;
         <NavLink to='/home'>Home</NavLink>
         &nbsp;
-        <NavLink to='/register'>Add User</NavLink>
+        <NavLink to='/register'>Register</NavLink>
       </span>
     </nav>
   </div>

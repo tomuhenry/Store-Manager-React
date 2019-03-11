@@ -20,7 +20,7 @@
       "<rootDir>/src/setupTests.js"
     ],
     "testPathIgnorePatterns": [
-      "<rootDir>/src/setupTests.js",
+      "<rootDir>/__tests__/setupTests.js",
       "<rootDir>/cypress"
     ],
     "modulePathIgnorePatterns": [
@@ -80,10 +80,12 @@
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-redux": "^6.0.1",
+    "react-responsive-navbar": "^1.0.11",
     "react-toastify": "^4.5.2",
     "redux": "^4.0.1",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
-    "serve": "^10.1.2"
+    "serve": "^10.1.2",
+    "sinon": "^7.2.7"
   }
 }
