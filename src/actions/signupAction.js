@@ -16,6 +16,13 @@ export const fetchsignupFailure = errors => ({
 });
 
 const signupAction = userData => dispatch => {
+  const token = localStorage.getItem('access_token');
+
+  const headers = {
+    'Content-Type': 'application/json',
+    Authorization: `Bearer ${token}`
+  };
+
   userData.rights = false;
   return axios
     .post(signupUrl, userData, {
