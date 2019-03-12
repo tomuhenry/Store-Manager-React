@@ -18,19 +18,16 @@ exports[`App should render correctly 1`] = `
       id="login"
     >
       <input
-        id="email"
         name="email"
         placeholder="Email..."
         type="email"
       />
       <input
-        id="password"
         name="password"
         placeholder="Password..."
         type="password"
       />
       <input
-        className="form_button"
         type="submit"
         value="Login"
       />
@@ -40,7 +37,6 @@ exports[`App should render correctly 1`] = `
       <br />
       <a
         href=""
-        id="forgot-password-link"
       >
         Forgot password?
       </a>

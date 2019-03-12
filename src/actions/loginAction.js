@@ -1,5 +1,6 @@
 import actionTypes from './actionTypes';
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
 export const fetchLoginSuccess = payload => ({
   type: actionTypes.LOGIN_SUCCESS,
@@ -20,18 +21,15 @@ const loginAction = userData => dispatch => {
     .then(response => {
       if (response.data.user_token) {
         dispatch(fetchLoginSuccess(response.data));
-        window.localStorage.setItem('access_token', response.data.user_token);
       } else if (response.data.admin_token) {
         dispatch(fetchLoginSuccess(response.data));
-        window.localStorage.setItem('access_token', response.data.admin_token);
       } else if (response.data.Alert) {
         document.getElementById('message').innerHTML = `${response.data.Alert}`;
         dispatch(fetchLoginFailure(response.data));
       }
     })
     .catch(error => {
-      document.getElementById('message').innerHTML =
-        'Login failed! check login info';
+      toast.error(error.response.data.error);
       dispatch(fetchLoginFailure(error.response));
     });
 };

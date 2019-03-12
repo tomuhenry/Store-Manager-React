@@ -1,4 +1,4 @@
-import loginReducer from '../loginReducer';
+import signupReducer from '../signupReducer';
 import actionTypes from '../../actions/actionTypes';
 
 const initState = {
@@ -9,13 +9,13 @@ const initState = {
 
 describe('Login Reducer', () => {
   it('should return the initial state', () => {
-    expect(loginReducer(undefined, {})).toEqual(initState);
+    expect(signupReducer(undefined, {})).toEqual(initState);
   });
 
-  it('In case of Login Success', () => {
+  it('In case of signup Success', () => {
     expect(
-      loginReducer(initState, {
-        type: actionTypes.LOGIN_SUCCESS,
+      signupReducer(initState, {
+        type: actionTypes.SIGNUP_SUCCESS,
         payload: { email: 'email.com', access_token: 'mytoken' }
       })
     ).toEqual({
@@ -25,10 +25,10 @@ describe('Login Reducer', () => {
     });
   });
 
-  it('In case of Login fail', () => {
+  it('In case of signup fail', () => {
     expect(
-      loginReducer(initState, {
-        type: actionTypes.LOGIN_FAIL,
+      signupReducer(initState, {
+        type: actionTypes.SIGNUP_FAIL,
         payload: { token: 'mytoken' }
       })
     ).toEqual({
