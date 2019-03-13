@@ -176,4 +176,13 @@ input[type='text'] {
     display: block;
     margin: 2px;
   }
+  .header {
+    height: 160px;
+  }
+
+  #nav-bar {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+  }
 }
