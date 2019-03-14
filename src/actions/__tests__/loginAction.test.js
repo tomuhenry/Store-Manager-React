@@ -1,14 +1,14 @@
 import configureMockStore from 'redux-mock-store';
-import React from 'react';
 import thunk from 'redux-thunk';
-import mockAxios from 'jest-mock-axios';
+import mockAxios from 'axios';
 import "babel-polyfill";
-import { shallow } from 'enzyme';
-import loginAction from '../loginAction';
+import actionTypes from '../actionTypes';
+import loginAction, { fetchLoginSuccess, fetchLoginFailure } from '../loginAction';
 
-const middlewares = [thunk];
-const mockStore = configureMockStore(middlewares);
+const middleware = [thunk];
+const mockStore = configureMockStore(middleware);
 const store = mockStore({});
+const userData = { email: "email@here.com", password:"my password" }
 
 describe('Login Actions', () => {
   afterEach = () => {
@@ -16,15 +16,44 @@ describe('Login Actions', () => {
   };
 
   it('dispatch actions for login', () => {
-    const userData = { email: "email@here.com", password:"my password" }
     mockAxios.post('MockURL', userData);
     store.dispatch(loginAction);
     expect(store.getActions()).toEqual([]);
   });
 
-  it('dispatch actions for login', () => {
-    let wrapper = shallow(<loginAction />);
-    expect(wrapper).toMatchSnapshot();
+  it('should dispatch success action', () => {
+    const middlewares = [thunk];
+    const mockStore = configureMockStore(middlewares);
+    const store = mockStore({});
+    const mockUserData = { email: 'email@here.com', password: 'my password' };
+
+    mockAxios.post('MockURL', mockUserData);
+    store.dispatch(fetchLoginSuccess(mockUserData));
+    expect(store.getActions()).toEqual([
+      {
+        payload: mockUserData,
+        type: actionTypes.LOGIN_SUCCESS
+      }
+    ]);
+    expect(store.getActions().length).toEqual(1);
+  });
+
+  it('should dispatch success action', () => {
+    const middlewares = [thunk];
+    const mockStore = configureMockStore(middlewares);
+    const store = mockStore({});
+    const mockUserData = { };
+
+    mockAxios.post('MockURL', mockUserData);
+    store.dispatch(fetchLoginFailure(mockUserData));
+    expect(store.getActions()).toEqual([
+      {
+        error: mockUserData,
+        type: actionTypes.LOGIN_FAIL
+      }
+    ]);
+    expect(store.getActions().length).toEqual(1);
   });
 
 });
+

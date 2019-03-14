@@ -3,6 +3,7 @@ import SignupForm from '../components/SignupForm';
 import { connect } from 'react-redux';
 import signupAction from '../actions/signupAction';
 import Header from '../components/Header';
+import { toast } from 'react-toastify';
 import Loader from '../components/Loader';
 
 export class SignupView extends Component {
@@ -12,6 +13,14 @@ export class SignupView extends Component {
     data: '',
     loading: false
   };
+
+  componentDidMount() {
+    const token = localStorage.getItem('access_token')
+    if (!token) {
+      toast.error('Please login');
+      this.props.history.push('/');
+    }
+  }
 
   handleChange = e => {
     this.setState({
@@ -25,6 +34,7 @@ export class SignupView extends Component {
       this.setState({ errors: errors });
       this.setState({ loading: false });
     } else if (data) {
+      this.setState({ data:data });
       this.setState({ loading: false });
     }
   }

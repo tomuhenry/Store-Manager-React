@@ -6,7 +6,7 @@ import Loader from '../components/Loader';
 export class LoginView extends Component {
   state = {
     value: '',
-    errors: {},
+    errors: '',
     data: '',
     loading: false
   };
@@ -23,6 +23,7 @@ export class LoginView extends Component {
       this.setState({ errors: errors.data });
       this.setState({ loading: false });
     } else if (data) {
+      
       if (data.admin_token) {
         localStorage.setItem('access_token', data.admin_token);
       } else if (data.user_token) {

@@ -10,18 +10,21 @@ const SignupForm = props => {
         <input
             type='text'
             placeholder='Username...'
+            id='name'
             name='name'
             onChange={props.changed}
           />
           <input
             type='email'
             placeholder='Email...'
+            id='email'
             name='email'
             onChange={props.changed}
           />
           <input
             type='password'
             placeholder='Password...'
+            id='password'
             name='password'
             onChange={props.changed}
           />    
